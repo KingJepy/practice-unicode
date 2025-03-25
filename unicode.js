@@ -16,6 +16,15 @@ let inputString = "Hi";
 Expected Output:
 sumCodePoints: 177 // 'H' = 72, 'i' = 105, 72 + 105 = 177
 
+*/
+let inputString = "Hi";
+let positionZero = inputString.charCodeAt(0);
+let positionOne = inputString.charCodeAt(1);
+let sumCodePoints = (positionZero + positionOne);
+console.log(sumCodePoints);
+
+/*
+
 Exercise 2: Generate a String from Two Code Points
 Objective: Take two numeric Unicode code points,
 convert them to characters using String.fromCharCode,
@@ -32,6 +41,13 @@ let codePoint2 = 66;
 Expected Output:
 combinedString: "AB" // 65 = 'A', 66 = 'B', combined = "AB"
 
+*/
+let codePoint1 = 65;
+let codePoint2 = 66;
+let combinedString = String.fromCharCode(codePoint1) + String.fromCharCode(codePoint2);
+console.log(combinedString);
+
+/*
 Exercise 3: Find the Character Difference
 Objective: Extract the Unicode code points of two given characters from a string
 and calculate the absolute difference between them.
@@ -47,8 +63,16 @@ let index2 = 2;
 
 Expected Output:
 codePointDifference: 16 // 'C' = 67, 't' = 116, |67 - 116| = 16
+*/
+let inputStringCat = "Cat";
+let index1 = 0;
+let index2 = 2;
+let codePointDifference = Math.abs(inputStringCat.charCodeAt(index1) - inputStringCat.charCodeAt(index2));
+console.log(inputStringCat.charCodeAt(index1));
+console.log(inputStringCat.charCodeAt(index2));
+console.log(codePointDifference);
 
-
+/*
 
 Practice Problem #2
 
@@ -86,15 +110,16 @@ Assign the result to a variable named swappedString.
 //Starter Code
 // Task 1
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0);
+let thirdCodePoint = inputString1.charCodeAt(2);
 
 // Task 2
-let wordFromCodePoints; // Your code here
+let wordFromCodePoints = String.fromCharCode(72) + String.fromCharCode(101) + String.fromCharCode(108) + String.fromCharCode(108)
 
 // Task 3
 let inputString2 = "Launch";
-let swappedString; // Your code here
+let swappedString = String.fromCharCode(inputString2.charCodeAt(5)) + String.fromCharCode(inputString2.charCodeAt(1)) + String.fromCharCode(inputString2.charCodeAt(2)) + String.fromCharCode(inputString2.charCodeAt(3)) + String.fromCharCode(inputString2.charCodeAt(4)) + String.fromCharCode(inputString2.charCodeAt(0));
+console.log(swappedString);
 
 // Log all results
 console.log({
